@@ -1,0 +1,21 @@
+{
+    "name": "nickdenry/yii2-cmf-basic-page",
+    "description": "Basic page extension for Yii2  framework",
+    "type": "yii2-extension",
+    "keywords": ["yii2"," cmf"," pages"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Denry",
+            "email": "nick.denry@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "nickdenry\\cmf\\basicPage\\": ""
+        }
+    }
+}
