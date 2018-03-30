@@ -1,6 +1,6 @@
 <?php
 
-namespace nickdenry\cmf\BasicPage\models;
+namespace nickdenry\cmf\pages\basic\models;
 
 use Yii;
 use yii\base\Model;

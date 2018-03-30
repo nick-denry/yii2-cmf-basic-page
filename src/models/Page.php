@@ -1,11 +1,10 @@
 <?php
 
-namespace nickdenry\cmf\BasicPage\models;
+namespace nickdenry\cmf\pages\basic\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\db\Expression;
 use yii\behaviors\SluggableBehavior;
 
 /**

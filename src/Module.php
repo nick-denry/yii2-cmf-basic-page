@@ -1,6 +1,6 @@
 <?php
 
-namespace nickdenry\cmf\BasicPage;
+namespace nickdenry\cmf\pages\basic;
 
 /**
  * This is just an example.
