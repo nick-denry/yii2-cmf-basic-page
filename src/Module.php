@@ -2,13 +2,17 @@
 
 namespace nickdenry\cmf\pages\basic;
 
+use Yii;
+use yii\base\InvalidParamException;
+use navatech\base\Module as BaseModule;
+
 /**
- * This is just an example.
+ * {@inheritDoc}
  */
-class Module extends \yii\base\Widget
+class Module extends BaseModule
 {
-    public function run()
+    public function init()
     {
-        return "Hello!";
+        parent::init();
     }
 }
