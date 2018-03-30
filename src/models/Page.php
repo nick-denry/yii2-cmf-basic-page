@@ -53,7 +53,7 @@ class Page extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'body' => 'Body',
-            'alias' => 'alias',
+            'alias' => 'Alias',
             'is_published' => 'Is Published',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
@@ -76,11 +76,6 @@ class Page extends \yii\db\ActiveRecord
             ],
             'timestamp' => [
                 'class' => TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
-                ],
-                'value' => new Expression('NOW()'),
             ],
         ];
     }
