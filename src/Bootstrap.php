@@ -19,13 +19,13 @@ class Bootstrap implements BootstrapInterface
      */
     public function bootstrap($app)
     {
-        if (!isset($app->get('i18n')->translations['basicPage*'])) {
-            $app->get('i18n')->translations['basicPage*'] = [
+        if (!isset($app->get('i18n')->translations['cmfBasicPage*'])) {
+            $app->get('i18n')->translations['cmfBasicPage*'] = [
                 'class' => PhpMessageSource::className(),
                 'basePath' => __DIR__ . '/messages',
                 'sourceLanguage' => 'en-US',
             ];
         }
-        Yii::setAlias('basicPage', __DIR__);
+        Yii::setAlias('cmfBasicPage', __DIR__);
     }
 }
