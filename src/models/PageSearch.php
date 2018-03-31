@@ -5,10 +5,10 @@ namespace nickdenry\cmf\pages\basic\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use nickdenry\cmf\BasicPage\models\BasicPage;
+use nickdenry\cmf\pages\basic\models\Page;
 
 /**
- * PageSearch represents the model behind the search form of `common\models\Page`.
+ * PageSearch represents the model behind the search form of `nickdenry\cmf\pages\basic\models\Page`.
  */
 class PageSearch extends Page
 {
@@ -18,8 +18,8 @@ class PageSearch extends Page
     public function rules()
     {
         return [
-            [['id', 'is_published'], 'integer'],
-            [['title', 'created_at', 'updated_at'], 'safe'],
+            [['id'], 'integer'],
+            [['title', 'body', 'alias', 'is_published', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -47,9 +47,6 @@ class PageSearch extends Page
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort' => [
-                'defaultOrder' => ['id' => SORT_DESC,],
-            ],
         ]);
 
         $this->load($params);
@@ -63,13 +60,14 @@ class PageSearch extends Page
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere([
-            'is_published' => $this->is_published,
-        ]);
-
-        $query->andFilterWhere(['like', 'title', $this->title]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'body', $this->body])
+            ->andFilterWhere(['like', 'alias', $this->alias])
+            ->andFilterWhere(['like', 'is_published', $this->is_published]);
 
         return $dataProvider;
     }
