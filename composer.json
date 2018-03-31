@@ -1,5 +1,5 @@
 {
-    "name": "nickdenry/yii2-cmf-basic-page",
+    "name": "nick-denry/yii2-cmf-basic-page",
     "description": "Basic page extension for Yii2 framework",
     "type": "yii2-extension",
     "keywords": ["yii2"," cmf"," pages"],
