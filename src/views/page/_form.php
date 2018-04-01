@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_published')->textInput() ?>
+    <?= $form->field($model, 'is_published')->checkbox() ?>
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 
