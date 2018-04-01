@@ -18,7 +18,7 @@ class m180330_163421_create_simple_pages_table extends Migration
             'teaser' => $this->text()->comment('Page teaser'),
             'body' => $this->text()->notNull()->comment('Page body'),
             'alias' => $this->string()->comment('Page url alias'),
-            'is_published' => $this->boolean()->notNull()->defaultValue(true)->comment('Is page published'),
+            'is_published' => $this->boolean()->notNull()->comment('Is page published'),
             'created_at' => $this->datetime()->notNull()->comment('Page creation time'),
             'updated_at' => $this->datetime()->notNull()->comment('Page update time'),
         ]);
@@ -29,6 +29,6 @@ class m180330_163421_create_simple_pages_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%pages}}');
+        $this->dropTable('{{%simple_pages}}');
     }
 }
