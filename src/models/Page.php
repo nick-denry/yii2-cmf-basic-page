@@ -25,7 +25,7 @@ class Page extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'pages';
+        return 'simple_pages';
     }
 
     /**
@@ -35,11 +35,11 @@ class Page extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'body'], 'required'],
-            [['body', 'alias'], 'string'],
+            [['teaser', 'body', 'alias'], 'string'],
             ['is_published', 'boolean'],
             [['created_at', 'updated_at'], 'safe'],
             [['title', 'alias'], 'string', 'max' => 255],
-            [['title', 'body', 'alias',], 'trim'],
+            [['title', 'teaser', 'body', 'alias',], 'trim'],
         ];
     }
 
@@ -49,13 +49,14 @@ class Page extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'body' => 'Body',
-            'alias' => 'Alias',
-            'is_published' => 'Is Published',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'id' => Yii::t('cmfBasicPage', 'ID'),
+            'title' => Yii::t('cmfBasicPage', 'Title'),
+            'teaser' => Yii::t('cmfBasicPage', 'Teaser'),
+            'body' => Yii::t('cmfBasicPage', 'Body'),
+            'alias' => Yii::t('cmfBasicPage', 'Alias'),
+            'is_published' => Yii::t('cmfBasicPage', 'Is published'),
+            'created_at' => Yii::t('cmfBasicPage', 'Created at'),
+            'updated_at' => Yii::t('cmfBasicPage', 'Updated at'),
         ];
     }
 

@@ -19,7 +19,7 @@ class PageSearch extends Page
     {
         return [
             [['id'], 'integer'],
-            [['title', 'body', 'alias', 'is_published', 'created_at', 'updated_at'], 'safe'],
+            [['title', 'teaser', 'body', 'alias', 'is_published', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -65,6 +65,7 @@ class PageSearch extends Page
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'teaser', $this->teaser])
             ->andFilterWhere(['like', 'body', $this->body])
             ->andFilterWhere(['like', 'alias', $this->alias])
             ->andFilterWhere(['like', 'is_published', $this->is_published]);
