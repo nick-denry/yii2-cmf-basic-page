@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel nickdenry\cmf\pages\basic\models\PageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Pages');
+$this->title = Yii::t('cmfBasicPage', 'Pages');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="page-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Page'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('cmfBasicPage', 'Create page'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'body:ntext',
+            //'body:ntext',
             'alias',
             'is_published',
             //'created_at',

@@ -13,5 +13,9 @@ return [
     'Created at' => 'Создано',
     'Updated at' => 'Обновлено',
     'Pages' => 'Страницы',
-    'Create page' => 'Добавить страницу'
+    'Create page' => 'Добавить страницу',
+    'Update' => 'Обновить',
+    'Delete' => 'Удалить',
+    'Save' => 'Сохранить',
+    'Update page: {nameAttribute}' => 'Обновить страницу: {nameAttribute}'
 ];

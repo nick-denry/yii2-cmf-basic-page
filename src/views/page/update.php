@@ -5,12 +5,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model nickdenry\cmf\pages\basic\models\Page */
 
-$this->title = Yii::t('app', 'Update Page: {nameAttribute}', [
+$this->title = Yii::t('cmfBasicPage', 'Update page: {nameAttribute}', [
     'nameAttribute' => $model->title,
 ]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Pages'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cmfBasicPage', 'Pages'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+$this->params['breadcrumbs'][] = Yii::t('cmfBasicPage', 'Update');
 ?>
 <div class="page-update">
 
