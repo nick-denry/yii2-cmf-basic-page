@@ -3,9 +3,11 @@
 namespace nickdenry\cmf\pages\basic\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\behaviors\SluggableBehavior;
+use yii\db\Expression;
+
 
 /**
  * This is the model class for table "pages".
@@ -76,6 +78,7 @@ class Page extends \yii\db\ActiveRecord
             ],
             'timestamp' => [
                 'class' => TimestampBehavior::className(),
+                'value' => new Expression('NOW()'),
             ],
         ];
     }
